@@ -111,7 +111,7 @@ with mlflow.start_run():
     print("Finished Training")
 
     # Save the model
-    model_save_path = 'C:\\Users\\ardad\\Desktop\\Yazılım ve Elektronik\\Face-Recognition\\models\\siamese_model.pth'
+    model_save_path = 'C:\\Users\\ardad\\Desktop\\Yazılım ve Elektronik\\Face_Recognition\\models\\siamese_model.pth'
     torch.save(model.state_dict(), model_save_path)
     mlflow.pytorch.log_model(model, "model")
     print(f'Model saved to {model_save_path}')

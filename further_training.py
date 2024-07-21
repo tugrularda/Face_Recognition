@@ -45,7 +45,7 @@ val_dataloader = DataLoader(validation_data, batch_size=1, shuffle=False)
 learning_rate = 0.000001
 batch_size = 64
 num_epochs = 10
-model_path = 'C:\\Users\\ardad\\Desktop\\Yazılım ve Elektronik\\Face-Recognition\\models\\siamese_model_f2.pth'
+model_path = 'C:\\Users\\ardad\\Desktop\\Yazılım ve Elektronik\\Face_Recognition\\models\\siamese_model_f2.pth'
 model = networks.SiameseNetwork(in_channels=3, in_size=256).to(device)
 model.load_state_dict(torch.load(model_path))
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
@@ -119,7 +119,7 @@ with mlflow.start_run():
     print("Finished Training")
 
     # Save the model
-    model_save_path = 'C:\\Users\\ardad\\Desktop\\Yazılım ve Elektronik\\Face-Recognition\\models\\siamese_model_f2_1.pth'
+    model_save_path = 'C:\\Users\\ardad\\Desktop\\Yazılım ve Elektronik\\Face_Recognition\\models\\siamese_model_f2_1.pth'
     torch.save(model.state_dict(), model_save_path)
     mlflow.pytorch.log_model(model, "model")
     print(f'Model saved to {model_save_path}')

@@ -44,7 +44,7 @@ print(len(db_data))
 
 
 #Model
-model_path = 'C:\\Users\\ardad\\Desktop\\Yazılım ve Elektronik\\Face-Recognition\\models\\siamese_model_f2.pth'
+model_path = 'C:\\Users\\ardad\\Desktop\\Yazılım ve Elektronik\\Face_Recognition\\models\\siamese_model_f2.pth'
 model = networks.SiameseNetwork(in_channels=3, in_size=256).to(device)
 model.load_state_dict(torch.load(model_path))
 model.eval()
