@@ -20,4 +20,4 @@ Initializing MLFlow:
   Log model by:
     mlflow.pytorch.log_model(model, "model")
 
-    Fetching models is explained in ui
+  Fetching models is explained in ui
