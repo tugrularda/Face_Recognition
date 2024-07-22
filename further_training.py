@@ -80,7 +80,7 @@ with mlflow.start_run():
             running_loss += loss.item()
 
             loss.backward()
-
+            
             if sample_idx % batch_size == batch_size-1:
                 batch += 1
                 optimizer.step()
@@ -119,7 +119,7 @@ with mlflow.start_run():
     print("Finished Training")
 
     # Save the model
-    model_save_path = 'C:\\Users\\ardad\\Desktop\\Yazılım ve Elektronik\\Face_Recognition\\models\\siamese_model_f2_1.pth'
+    model_save_path = 'C:\\Users\\ardad\\Desktop\\Yazılım ve Elektronik\\Face_Recognition\\models\\siamese_model_f2_3.pth'
     torch.save(model.state_dict(), model_save_path)
     mlflow.pytorch.log_model(model, "model")
     print(f'Model saved to {model_save_path}')
